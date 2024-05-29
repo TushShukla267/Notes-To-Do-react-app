@@ -1,9 +1,15 @@
+// App.js
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import ToDo from "./Components/ToDo";
 import Notes from "./Components/Notes";
 import { useState } from "react";
 import Alert from "./Components/Alert";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 function App() {
   const [mode, setmode] = useState('light');
@@ -44,12 +50,16 @@ function App() {
 
   return (
     <>
-      <div className="App">
+      <Router>
         <Navbar mode={mode} toggleMode={ChangeMode} text={text} textcolor={textColor} />
         <Alert Alert={alert} />
-        <ToDo mode={mode} textcolor={textColor} />
-        <Notes mode={mode} textcolor={textColor} />
-      </div>
+        <div className="App">
+        <Routes>
+          <Route exact path="/ToDo's" element={<ToDo mode={mode} textcolor={textColor} showAlert={ShowAlert} />} />
+          <Route exact path="/Notes" element={<Notes mode={mode} textcolor={textColor} showAlert={ShowAlert} />} />
+        </Routes>
+        </div>
+      </Router>
     </>
   );
 }

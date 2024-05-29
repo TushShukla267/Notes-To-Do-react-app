@@ -49,7 +49,7 @@ function Navbar(props) {
       </div>
       <nav
         className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} justify-content-center`}
-        style={{paddingLeft: '250px'}}
+        style={{ paddingLeft: '250px' }}
       >
         <button type="button" className="btn btn-outline-primary">
           Edit
@@ -62,7 +62,7 @@ function Navbar(props) {
         <button type="button" className="btn btn-outline-secondary">
           Settings
         </button>
-        <div className="form-check form-switch" style={{position : 'relative' , left : '300px'}}>
+        <div className="form-check form-switch" style={{ position: 'relative', left: '300px' }}>
           <input
             className="form-check-input"
             type="checkbox"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Todoimage from "./Todoimage.jpg";
 import NotesImage from "./NotesImage.png";
 
@@ -13,7 +14,7 @@ function BottomNavbar(props) {
           <li className="nav-item">
             <nav className={`navbar navbar-${props.mode} bg-${props.mode}`}>
               <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/Notes">
                   <img
                     src={NotesImage}
                     alt=""
@@ -22,14 +23,14 @@ function BottomNavbar(props) {
                     className="d-inline-block align-text-top"
                   />
                   <span style={props.textcolor}>Notes</span>
-                </a>
+                </Link>
               </div>
             </nav>
           </li>
           <li className="nav-item">
             <nav className={`navbar navbar-${props.mode} bg-${props.mode}`}>
               <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/ToDo's">
                   <img
                     src={Todoimage}
                     alt=""
@@ -38,7 +39,7 @@ function BottomNavbar(props) {
                     className="d-inline-block align-text-top"
                   />
                   <span style={props.textcolor}>To Do's</span>
-                </a>
+                </Link>
               </div>
             </nav>
           </li>
