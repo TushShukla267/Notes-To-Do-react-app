@@ -26,7 +26,7 @@ function ToDo(props) {
 
   const addTask = (index) => {
     setTasks([...tasks, { text: "", checked: false }]);
-    props.showAlert(`Added a New Task ${index + 1}`, "success");
+    props.showAlert(`Added a New Task ${index + 1 }`, "success");
   };
 
   const deleteTask = (index) => {
